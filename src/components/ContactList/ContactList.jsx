@@ -1,4 +1,6 @@
-export const ContactList = ({contacts, deleteContacts}) => (
+import propTypes from 'prop-types';
+
+export const ContactList = ({ contacts, deleteContacts }) => (
   
     <ul>
       {contacts.map((contact, id) => (
@@ -14,3 +16,15 @@ export const ContactList = ({contacts, deleteContacts}) => (
     </ul>
  
 );
+
+
+ContactList.propTypes = {
+  contacts: propTypes.arrayOf(
+    propTypes.exact({
+      id: propTypes.string.isRequired,
+      name: propTypes.string.isRequired,
+      number: propTypes.string.isRequired,
+    })
+  ),
+  deleteContacts: propTypes.func.isRequired,
+};
