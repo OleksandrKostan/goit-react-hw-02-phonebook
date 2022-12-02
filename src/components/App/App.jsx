@@ -24,9 +24,16 @@ export class App extends Component {
       name,
       number,
     };
-    this.setState(({ contacts }) => ({
-      contacts: [contact, ...contacts],
-    }));
+  
+      const findContact = this.state.contacts.find(contact => contact.name.toLowerCase().includes(name.toLowerCase()));
+
+      if (findContact) {
+        alert(`${findContact.name} is already in contacts`)
+      } else {
+        this.setState(prevState => ({
+          contacts: [contact, ...prevState.contacts],
+        }));
+      };
   };
 
   changeFilter = e => {
@@ -46,7 +53,7 @@ export class App extends Component {
   render() {
     const { filter } = this.state;
     return (<> <ThemeProvider theme={theme}> <GlobalStyle />
-      <h2>Phonebook</h2>
+      <h1>Phonebook</h1>
       <ContactForm onSubmit={this.addContact} />
       <h2>Contacts</h2>
       <Filter value={filter} onChange={this.changeFilter} />
