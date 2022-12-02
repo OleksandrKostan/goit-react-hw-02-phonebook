@@ -34,6 +34,7 @@ p,
 ul {
   margin-bottom: 0;
   margin-top: 0;
+
 }
 img {
   display: block;
@@ -42,5 +43,7 @@ img {
 }
 li{
   list-style: none;
-}
+  display: flex
+
+} 
 `

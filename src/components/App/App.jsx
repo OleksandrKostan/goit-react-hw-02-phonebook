@@ -62,8 +62,7 @@ export class App extends Component {
       <h2>Contacts</h2>
       <Filter value={filter} onChange={this.changeFilter} />
       <ContactList contacts={this.getFilteredContacts()}
-        deleteContacts={this.deleteContacts}
-      />
+        deleteContacts={this.deleteContacts}/>
     </ThemeProvider> </>
     );
   }

@@ -3,6 +3,8 @@ import propTypes from 'prop-types';
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 
+import { Button } from './ContactForm.styled';
+
 export class ContactForm extends Component {
   state = {
     name: '',
@@ -54,9 +56,9 @@ export class ContactForm extends Component {
               id={this.numberId}
 />
         </label>
-        <button  type="submit" disabled={!this.state.name || !this.state.number} >
+        <Button  type="submit" disabled={!this.state.name || !this.state.number} >
         Add contact
-      </button>
+      </Button>
       </form>);
     }
 }
