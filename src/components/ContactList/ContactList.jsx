@@ -1,4 +1,4 @@
-import { ElementListContact } from 'ElementListContact/ElementListContact';
+import { ElementListContact } from 'components/ElementListContact/ElementListContact';
 import propTypes from 'prop-types';
 // import { Delete } from './ContactList.styled';
 

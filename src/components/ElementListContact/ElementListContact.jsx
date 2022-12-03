@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Delete } from 'ElementListContact/ElementList.styled';
+import { Delete } from './ElementList.styled';
 
 export const ElementListContact = ({ id, name, number, onClickDelete }) => (
     <li key={id} >
