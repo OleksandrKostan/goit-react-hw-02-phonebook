@@ -29,6 +29,7 @@ export class App extends Component {
 
       if (findContact) {
         alert(`${findContact.name} is already in contacts`)
+        return findContact.name;
       } else {
         this.setState(({contacts}) => ({
           contacts: [contact, ...contacts],
@@ -62,7 +63,7 @@ export class App extends Component {
       <h2>Contacts</h2>
       <Filter value={filter} onChange={this.changeFilter} />
       <ContactList contacts={this.getFilteredContacts()}
-        deleteContacts={this.deleteContacts}/>
+        onClickDelete={this.deleteContacts}/>
     </ThemeProvider> </>
     );
   }
